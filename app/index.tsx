@@ -4,14 +4,14 @@ import { ImageBackground, StyleSheet, Text, View } from "react-native";
 export default function Index() {
   return (
     <ImageBackground
-      source={require("../assets/images/something.png.jpg")}
+      source={require("../assets/images/something.jpg")}
       style={styles.background}
       resizeMode="cover"
     >
     <View style={styles.container}>
-      <Text style={styles.myText}>THE</Text>
-      <Text style={styles.myText}>HOME</Text>
-      <Text style={styles.myText}>SCREEN</Text>
+      <Text style={styles.myText}>FIRST</Text>
+      <Text style={styles.myText}>DROP</Text>
+      <Text style={styles.myText}>SOON</Text>
 
       <Link href="/about" style={styles.button}>
         <Text style={styles.buttonText}>NOTIFY ME</Text>
