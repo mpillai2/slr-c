@@ -9,8 +9,8 @@ export default function Index() {
       resizeMode="cover"
     >
     <View style={styles.container}>
-      <Text style={styles.myText}>FIRST</Text>
       <Text style={styles.myText}>DROP</Text>
+      <Text style={styles.myText}>COMING</Text>
       <Text style={styles.myText}>SOON</Text>
 
       <Link href="/about" style={styles.button}>
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     textShadowColor: "white",
     textShadowOffset: { width: 0, height: 0 },
-    textShadowRadius: 6,  
+    textShadowRadius: 8,  
   },
   button: {
     marginTop: 20,
