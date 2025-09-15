@@ -1,5 +1,6 @@
+import { Link } from "expo-router";
 import React, { useRef, useState } from "react";
-import { Dimensions, Image, ImageBackground, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Dimensions, Image, ImageBackground, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const { width: screenWidth } = Dimensions.get("window");
 
@@ -41,7 +42,15 @@ export default function About() {
         >
           {slides.map((slide, index) => (
             <View key={index} style={styles.slide}>
-              <Image source={slide.image} style={styles.image} />
+              <Link href="/checkout" asChild>
+                <TouchableOpacity style={{ width: 300, height: 250 }} activeOpacity={0.9}>
+                  <Image
+                    source={slide.image}
+                    style={styles.image}
+                    resizeMode="contain"
+                  />
+                </TouchableOpacity>
+              </Link>
               <Text style={styles.title}>{slide.title}</Text>
             </View>
           ))}
@@ -92,7 +101,7 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   image: {
-    width: "80%",
+    width: 300,
     height: 250,
     borderRadius: 12,
     marginBottom: 15,
@@ -101,7 +110,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.4,
     shadowRadius: 20,
     elevation: 10,
-    resizeMode: "contain",
   },
   title: {
     fontSize: 22,
